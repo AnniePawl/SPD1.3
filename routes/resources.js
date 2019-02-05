@@ -1,4 +1,5 @@
-const Resource = require()
+const Resource = require('../models/resource.js')
+
 module.exports = app => {
 
     app.get('/', (req, res) => {

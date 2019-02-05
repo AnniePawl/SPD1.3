@@ -9,7 +9,7 @@ const mongoose = require('mongoose');
 const port = process.env.PORT || 3000;
 
 //Connect Mongoose
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://', {useNewUrlParser: true});
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/SPD13', {useNewUrlParser: true});
 
 //Handlebars stuff
 // app.engine('hbs', exphbs({defaultLayout: 'main', extname: '.hbs', helpers: {moment: moment}}));
@@ -21,8 +21,8 @@ app.use(methodOverride('_method'));
 app.use(bodyParser.json())
 
 //Note to self don't need app.use if you write the code like this it can call it from this style
-require('')(app);
-require('')(app);
+require('./routes/resources')(app);
+
 
 //Port Listen
 app.listen(port, function () {
