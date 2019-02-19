@@ -1,0 +1,105 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    background: white;
+    /* background: linear-gradient(white, #918f8f)fixed; */
+}
+ a {
+     color:black;
+     text-decoration: none;
+     font-family: 'Open Sans', sans-serif;
+     font-size: 1.5em;
+
+ }
+
+ h1 {
+     margin-top: .5em;
+     color:black;
+     text-decoration: none;
+     font-family: 'Open Sans', sans-serif;
+     font-size: 3em;
+     text-align: center;
+
+ }
+
+ /*NAVIGATION BAR STYLES  */
+nav {
+    width: 100%;
+    height: 6em;
+    margin: 0 auto 0;
+    padding-top: 0px;
+    background: white;
+}
+
+nav > ul {
+    list-style: none;
+    height: 6em;
+    margin-left: -1em;
+    text-transform: uppercase;
+}
+
+nav >ul >li:first-child {
+    float: left;
+    margin-left: -2em;
+}
+
+nav >ul >li {
+    float: right;
+    width: 200px;
+    height:5em;
+    line-height: 60px;
+    text-align: center;
+    position: relative;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+}
+
+nav > ul >li:hover {
+    background:none;
+    opacity: 40%;
+}
+/* 
+ul.drop-menu {
+    position: absolute;
+    top: 100%;`
+    left: 0%;
+    width: 100%;
+    padding: 0;
+}
+
+ul.drop-menu li {
+    padding: 15px;
+    line-height: 1.4;
+    font-size: 14px;
+    background: #f9f9f9;
+    color: black;
+}
+
+ul.drop-menu li:hover {
+    background-color: #b2b5b7;
+}
+
+ul.drop-menu li:last-child {
+    border-radius: 0px 0px 5px 5px;
+}
+
+/* Hides Drop Menu unless Triggered */
+ul.drop-menu li {
+    display: none;
+}
+
+li:hover > ul.drop-menu li {
+    display: block;
+}
+
+li:hover > ul.drop-menu {
+    perspective: 1000px;
+    -webkit-animation: menu1 300ms ease-in-out forwards;
+} */
