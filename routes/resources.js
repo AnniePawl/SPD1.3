@@ -17,16 +17,40 @@ connection.once('open', function () {
 
 module.exports = app => {
 
+    // app.get('/', (req, res) => {
+    //     console.log('entered /');
+    //     console.log(gfs);
+    //     Resource.find()
+    //     .then((resources) => {
+    //         res.json(resources)
+    //     })
+    //     .catch(err => {
+    //         console.log(err)
+    //     });
+    // })
     app.get('/', (req, res) => {
-        console.log('entered /');
-        console.log(gfs);
-        Resource.find()
-        .then((resources) => {
-            res.json(resources)
+        // console.log('entered /');
+        // console.log(gfs);
+        Resource.find().distinct('category')
+        .then((categories) => {
+            res.json(categories)
         })
         .catch(err => {
             console.log(err)
         });
+    })
+
+    app.get('/search', (req, res) => {
+        console.log('entered search');
+        searchTerm = req.query.searchTerm
+        console.log(searchTerm);
+        Resource.find({ $text : {$search: searchTerm} })
+        .then((searchResult) => {
+            res.json(searchResult);
+        })
+        .catch((err) => {
+            console.log(err);
+        })
     })
 
     app.get('/resources/upload', (req, res) => {
@@ -127,5 +151,16 @@ module.exports = app => {
         }).catch((err => {
             console.log(err.message)
         }))
+    })
+
+
+    app.get('/:category', (req, res) => {
+        Resource.find({category: req.params.category})
+        .then((docs) => {
+            res.json(docs)
+        })
+        .catch((err) => {
+            console.log(err);
+        })
     })
 }
