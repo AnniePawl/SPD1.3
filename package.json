@@ -1,0 +1,29 @@
+{
+  "name": "spd1.3",
+  "version": "1.0.0",
+  "description": "link organizer",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnniePawl/SPD1.3.git"
+  },
+  "author": "Anna Pawl, Jason, Rinni, Fang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnniePawl/SPD1.3/issues"
+  },
+  "homepage": "https://github.com/AnniePawl/SPD1.3#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "fs": "0.0.1-security",
+    "gridfs-stream": "^1.1.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.4.9"
+  }
+}
