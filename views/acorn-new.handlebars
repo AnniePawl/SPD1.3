@@ -1,0 +1,13 @@
+<!-- ACORN NEW -->
+
+<div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+          <form method="POST" action="/categories/{{categoryId}}/posts">
+              {{> new-acorn-form}}
+              <input type="hidden" name="categoryId" value="{{categoryId}}">
+              <div class="form-group">
+                <button class="btn btn-primary" type="submit">Save Acorn!</button>
+              </div>
+          </form>
+      </div>
+</div>

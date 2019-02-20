@@ -1,18 +1,33 @@
-<!-- CATAGORIES SHOW -->
 
-<a href="/">Back to Home</a>
+<div class="text-right">
+    <a href="/categories/{{category._id}}/acorns/new" class="btn btn-primary">Create an Acorn</a>
+</div>
 
 <div class="row">
-  <div class="col-sm-6 col-sm-offset-3">
-    <h1>{{acorn.name}}</h1>
-    <h2>{{acorn.categoryName}}</h2>
-    <p>{{acorn.description}}</p>
+    <div class="col-sm-4">
+    </div>
 
-    <p><a href="/categories/{{acorn.categoryId}}/acorns/{{acorn._id}}/edit">Edit</a></p>
+    <div class="col-sm-8">
+        <h1>{{category.name}}</h1>
+        <p class="lead">{{category.description}}</p>
+    </div>
 
-    <p><form method="POST" action="/categories/{{acorn.categoryId}}/acorns/{{acorn._id}}?_method=DELETE">
-        <button class="btn btn-primary" type="submit">Delete</button>
-    </form></p>
+    <h3>Project Posts</h3>
+    {{#each acorns}}
 
-  </div>
+<div>
+    <h1><a href="/categories/{{this.categoryId}}/acorns/{{this._id}}"></h1>
+        <h2>{{category.name}}</h2>
+        <p>{{this.description}}</p>
+
+<!--Edit Project Link -->
+        <p><a href="/categories/{{this.categoryId}}/acorns/{{this._id}}/edit">Edit</a></p>
+
+<!-- Delete Project Button -->
+  <p><form method="POST" action="/categories/{{this.categoryId}}/acorns/{{this._id}}?_method=DELETE">
+      <button class="btn btn-primary" type="submit">Delete</button>
+  </form></p>
+
+    </a>
+    {{/each}}
 </div>
