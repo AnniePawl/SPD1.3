@@ -9,5 +9,7 @@ const ResourceSchema = new Schema({
     category: {type: String}
 })
 
+ResourceSchema.index({name: 'text', notes: 'text', category: 'text'});
+
 const Resource = mongoose.model('Resource', ResourceSchema)
 module.exports = Resource
