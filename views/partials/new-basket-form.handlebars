@@ -1,0 +1,27 @@
+<!-- Represent Categories as Baskets??? -->
+<!-- Rereference Stylesheet  -->
+<link rel="stylesheet" href="/css/form.css">
+
+<!-- NEW CATEGORY FORM -->
+<div class = form-container>
+    <h1>Create a New Category</h1>
+    <div class= new_category_form>
+
+  <!-- CATEGORY NAME -->
+      <div class="form-group">
+        <label for="category-name"> </label><br>
+        <input type="text" class="form-control" id="category-name" name="name" placeholder="Category Name" value="{{category.name}}"/>
+      </div>
+
+      <!-- CATEGORY DESCRIPTION -->
+      <div class="form-group">
+        <label for="description"></label><br>
+        <textarea class="form-control" id="category-description" name="description" placeholder="A Brief Description of this Category" rows="10" cols="45" />{{category.description}}</textarea>
+      </div>
+
+        <!--ACORN IMAGE UPLOAD  -->
+        <div class="form-group">
+            <input class="form-control" id="categoryImg" type="file" name="categoryImg" accept="image/*" value="{{category.categoryImg}}" />
+        </div>
+    </div>
+</div>
