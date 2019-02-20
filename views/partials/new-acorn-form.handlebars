@@ -1,59 +1,43 @@
+<!-- Rereference Stylesheet  -->
 <link rel="stylesheet" href="/css/form.css">
 
+<!-- NEW ACORN FORM -->
 <div class = form-container>
-    <h1>Create a New Project</h1>
+    <h1>Create a New Acorn</h1>
+    <div class= new_project_form>
 
-<div class= new_project_form>
-  <!-- PROJECT TITLE -->
-  <div class="form-group">
-    <label for="project-title"> </label><br>
-    <input type="text" class="form-control" id="project-title" name="title" placeholder="Project Title" value="{{project.title}}"/>
-  </div>
+  <!-- ACORN TITLE -->
+      <div class="form-group">
+        <label for="acorn-name"> </label><br>
+        <input type="text" class="form-control" id="acorn-name" name="name" placeholder="Acorn Name" value="{{acorn.name}}"/>
+      </div>
 
-  <!-- PROJECT URL -->
-  <div class="form-group">
-    <label for="project-url"></label><br>
-    <input class="form-control" id="project-url" type="text" name="projectCategory" placeholder="Proejct URL" value="{{project.url}}" />
-  </div>
+      <!-- ACORN DESCRIPTION -->
+      <div class="form-group">
+        <label for="description"></label><br>
+        <textarea class="form-control" id="acorn-description" name="description" placeholder="A Brief Description of this Acorn" rows="10" cols="45" />{{acorn.description}}</textarea>
+      </div>
 
-  <!-- PROJECT CATEGORY -->
-  <!--Value? -->
-  <div class="form-group">
-    <select id="category" name="category" selected="{{ category }}">
-      <option value="astronomy">Astronomy</option>
-      <option value="biology">Biology</option>
-      <option value="chemistry">Chemistry</option>
-      <option value="computer science">Computer Science</option>
-      <option value="environmental">Environmental</option>
-      <option value="engineering">Engineering</option>
-      <option value="physics">Physics</option>
-      <option value="psychology">Psychology</option>
-    </select>
-  </div>
 
-<!-- PROJECT SUMMARY -->
-<div class="form-group">
-  <label for="summary"></label><br>
-  <textarea class="form-control" id="project-summary" name="description" placeholder="A Brief Summary of the Project" rows="10" cols="45" />{{project.summary}}</textarea>
-</div>
+      <!-- ACORN URL -->
+      <div class="form-group">
+        <label for="acorn-url"></label><br>
+        <input class="form-control" id="acorn-url" type="text" name="projectCategory" placeholder="Acorn URL" value="{{acorn.url}}"/>
+      </div>
 
-<!--PROJECT IMAGE UPLOAD  -->
-<div class="form-group">
-    <input class="form-control" id="projectImg" type="file" name="projectImg" accept="image/*" value="{{project.projectImg}}" />
+      <!-- ACORN CATEGORY -->
+      <!--Value? -->
+      <div class="form-group">
+        <select id="category" name="category" selected="{{ category }}">
+            <!-- FILLER - can we populate this w/ real data? -->
+          <option value="make-school">Make School</option>
+          <option value="psychology">DIY</option>
+        </select>
+      </div>
 
-</div>
-</div>
-</div>
-
-<div class="bubbles">
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
+        <!--ACORN IMAGE UPLOAD  -->
+        <div class="form-group">
+            <input class="form-control" id="acornImg" type="file" name="acornImg" accept="image/*" value="{{acorn.acornImg}}" />
+        </div>
+    </div>
 </div>

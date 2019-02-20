@@ -7,8 +7,8 @@ body {
     height: 100%;
     font-size: 18px;
     font-family: 'Open Sans', sans-serif;
-    background: white;
-    /* background: linear-gradient(white, #918f8f)fixed; */
+    /* background: white; */
+    background: linear-gradient(white, #FF9486)fixed;
 }
  a {
      color:black;
@@ -65,7 +65,7 @@ nav > ul >li:hover {
     background:none;
     opacity: 40%;
 }
-/* 
+
 ul.drop-menu {
     position: absolute;
     top: 100%;`
@@ -102,4 +102,4 @@ li:hover > ul.drop-menu li {
 li:hover > ul.drop-menu {
     perspective: 1000px;
     -webkit-animation: menu1 300ms ease-in-out forwards;
-} */
+}
