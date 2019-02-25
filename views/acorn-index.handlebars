@@ -2,13 +2,13 @@
 
 <h1>Your Acorns</h1>
 
-<a href="/acorns/new">New Acorn!</a>
+<a href="/resources/new">New Acorn!</a>
 
 <div class="row">
     {{#each acorns}}
   <div class="col-sm-3">
-    <h2><a href="/acorns/{{this._id}}">{{this.name}}</a></h2>
-    <small>{{this.categoryName}}</small>
+    <h2><a href="/resources/{{this._id}}">{{this.name}}</a></h2>
+    <small>{{this.category}}</small>
   </div>
 {{/each}}
 </div>

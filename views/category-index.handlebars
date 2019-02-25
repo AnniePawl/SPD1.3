@@ -3,12 +3,12 @@
 <!-- Baskets? Bags? -->
 <h1>Categories</h1>
 
-<a href="/categories/new">New Category</a>
+<!-- <a href="/categories/new">New Category</a> -->
 
 <div class="row">
     {{#each categories}}
   <div class="col-sm-3">
-    <p>{{this}}</p>
+    <p><a href="/{{this}}">{{this}}</a></p>
     <!-- <h2><a href="/categories/{{this._id}}">{{this.name}}</a></h2>
     <small>{{this.categoryName}}</small> -->
   </div>

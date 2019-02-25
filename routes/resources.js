@@ -81,25 +81,26 @@ module.exports = app => {
         });
     });
 
-    app.get('/resources/download', (req, res) => {
-        // Check file exist on MongoDB
-
-        var filename = req.query.filename;
-
-        gfs.exist({ filename: filename }, (err, file) => {
-            if (err || !file) {
-                res.status(404).send('File Not Found');
-                return
-            }
-
-            var readstream = gfs.createReadStream({ filename: filename });
-            readstream.pipe(res);
-        });
-    });
+    // app.get('/resources/download', (req, res) => {
+    //     // Check file exist on MongoDB
+    //
+    //     var filename = req.query.filename;
+    //
+    //     gfs.exist({ filename: filename }, (err, file) => {
+    //         if (err || !file) {
+    //             res.status(404).send('File Not Found');
+    //             return
+    //         }
+    //
+    //         var readstream = gfs.createReadStream({ filename: filename });
+    //         readstream.pipe(res);
+    //     });
+    // });
 
     // NEW
     app.get ('/resources/new', (req, res) => {
-        res.json('-new', {});
+        // res.json('-new', {});
+        res.render('acorn-new.handlebars');
     })
 
     // CREATE
@@ -119,7 +120,8 @@ module.exports = app => {
     app.get('/resources/:id', (req, res) => {
         Resource.findById(req.params.id)
         .then((resource) => {
-            res.json(resource)
+            // res.json(resource)
+            res.render('acorn-show.handlebars', {acorn: resource})
         })
         .catch((err) => {
             console.log(err.message)
@@ -129,7 +131,8 @@ module.exports = app => {
     // EDIT
     app.get('/resources/:id/edit', (req, res) => {
         Resource.findById(req.params.id, function(err, ) {
-            res.json('resources-edit')
+            // res.json('resources-edit')
+            res.render('acorn-edit.handlebars', {rId: req.params.id})
         })
     })
 
@@ -148,7 +151,7 @@ module.exports = app => {
     app.delete('/resources/:id', function(req, res) {
         console.log('deleted')
         Resource.findByIdAndRemove(req.params.id).then((resource) => {
-            res.redirect('/resources')
+            res.redirect('/')
         }).catch((err => {
             console.log(err.message)
         }))
@@ -158,7 +161,8 @@ module.exports = app => {
     app.get('/:category', (req, res) => {
         Resource.find({category: req.params.category})
         .then((docs) => {
-            res.json(docs)
+            // res.json(docs)
+            res.render('acorn-index.handlebars', {acorns: docs})
         })
         .catch((err) => {
             console.log(err);
