@@ -132,7 +132,7 @@ module.exports = app => {
     app.get('/resources/:id/edit', (req, res) => {
         Resource.findById(req.params.id, function(err, ) {
             // res.json('resources-edit')
-            res.render('acorn-edit.handlebars')
+            res.render('acorn-edit.handlebars', {rId: req.params.id})
         })
     })
 

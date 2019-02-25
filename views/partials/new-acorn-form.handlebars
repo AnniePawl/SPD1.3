@@ -9,35 +9,37 @@
   <!-- ACORN TITLE -->
       <div class="form-group">
         <label for="acorn-name"> </label><br>
-        <input type="text" class="form-control" id="acorn-name" name="name" placeholder="Acorn Name" value="{{acorn.name}}"/>
+        <input type="text" class="form-control" id="acorn-name" name="name" placeholder="Acorn Name"/>
       </div>
 
       <!-- ACORN DESCRIPTION -->
       <div class="form-group">
         <label for="description"></label><br>
-        <textarea class="form-control" id="acorn-description" name="description" placeholder="A Brief Description of this Acorn" rows="10" cols="45" />{{acorn.description}}</textarea>
+        <textarea class="form-control" id="acorn-description" name="notes" placeholder="A Brief Description of this Acorn" rows="10" cols="45" /></textarea>
       </div>
 
 
       <!-- ACORN URL -->
       <div class="form-group">
         <label for="acorn-url"></label><br>
-        <input class="form-control" id="acorn-url" type="text" name="acornCategory" placeholder="Acorn URL" value="{{acorn.url}}"/>
+        <input class="form-control" id="acorn-url" type="text" name="url" placeholder="Acorn URL"/>
       </div>
 
       <!-- ACORN CATEGORY -->
       <!--Value? -->
       <div class="form-group">
-        <select id="category" name="category" selected="{{ category }}">
+          <label for="acorn-category"></label><br>
+          <input class="form-control" id="acorn-category" type="text" name="category" placeholder="Acorn Category"/>
+        <!-- <select id="category" name="category" selected="{{ category }}"> -->
             <!-- FILLER - can we populate this w/ real data? -->
-          <option value="make-school">Make School</option>
+          <!-- <option value="make-school">Make School</option>
           <option value="psychology">DIY</option>
-        </select>
+        </select> -->
       </div>
 
         <!--ACORN IMAGE UPLOAD  -->
-        <div class="form-group">
+        <!-- <div class="form-group">
             <input class="form-control" id="acornImg" type="file" name="acornImg" accept="image/*" value="{{acorn.acornImg}}" />
-        </div>
+        </div> -->
     </div>
 </div>
