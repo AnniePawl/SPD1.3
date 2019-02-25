@@ -2,6 +2,7 @@ const Resource = require('../models/resource.js')
 const mongoose = require('mongoose');
 var Grid = require('gridfs-stream')
 var fs = require('fs');
+var contentType = require('content-type')
 mongoose.Promise = global.Promise;
 Grid.mongo = mongoose.mongo;
 var connection = mongoose.connection;
@@ -31,10 +32,15 @@ module.exports = app => {
     app.get('/', (req, res) => {
         // console.log('entered /');
         // console.log(gfs);
+        var obj = contentType.parse(req)
         Resource.find().distinct('category')
         .then((categories) => {
             // res.json(categories)
-            res.render('category-index.handlebars', {categories: categories})
+            if (obj.type == "text/html"){
+                res.render('category-index.handlebars', {categories: categories})
+            } else {
+                res.json(categories)
+            }
         })
         .catch(err => {
             console.log(err)
@@ -106,10 +112,16 @@ module.exports = app => {
     // CREATE
     app.post('/resources', (req, res) => {
         console.log("req.body:", req.body)
+        var obj = contentType.parse(req)
+        console.log(obj);
         Resource.create(req.body)
         .then((resource) => {
             console.log("new Resource :", )
-            res.redirect(`/resources/${resource._id}`)
+            if (obj.type == "application/x-www-form-urlencoded"){
+                res.redirect(`/resources/${resource._id}`)
+            } else {
+                res.json(resource)
+            }
         })
         .catch((err) => {
             console.log(err.message)
@@ -118,10 +130,14 @@ module.exports = app => {
 
     // SHOW
     app.get('/resources/:id', (req, res) => {
+        var obj = contentType.parse(req)
         Resource.findById(req.params.id)
         .then((resource) => {
-            // res.json(resource)
-            res.render('acorn-show.handlebars', {acorn: resource})
+            if (obj.type == "text/html"){
+                res.render('acorn-show.handlebars', {acorn: resource})
+            } else {
+                res.json(resource)
+            }
         })
         .catch((err) => {
             console.log(err.message)
@@ -138,9 +154,14 @@ module.exports = app => {
 
     // UPDATE
     app.put('/resources/:id', (req, res) => {
+        var obj = contentType.parse(req)
         Resource.findByIdAndUpdate(req.params.id, req.body)
         .then((resource) => {
-            res.redirect(`/resources/${resource._id}`)
+            if (obj.type == "application/x-www-form-urlencoded"){
+                res.redirect(`/resources/${resource._id}`)
+            } else {
+                res.json(resource)
+            }
         })
         .catch(err => {
             console.log(err.message)
@@ -150,8 +171,14 @@ module.exports = app => {
     // DELETE
     app.delete('/resources/:id', function(req, res) {
         console.log('deleted')
+        var obj = contentType.parse(req)
+        console.log(obj);
         Resource.findByIdAndRemove(req.params.id).then((resource) => {
-            res.redirect('/')
+            if (obj.type == "application/x-www-form-urlencoded"){
+                res.redirect('/')
+            } else {
+                res.json(resource)
+            }
         }).catch((err => {
             console.log(err.message)
         }))
@@ -159,10 +186,16 @@ module.exports = app => {
 
 
     app.get('/:category', (req, res) => {
+        var obj = contentType.parse(req)
         Resource.find({category: req.params.category})
         .then((docs) => {
             // res.json(docs)
-            res.render('acorn-index.handlebars', {acorns: docs})
+            if (obj.type == "text/html"){
+                res.render('acorn-index.handlebars', {acorns: docs})
+            }
+            else {
+                res.json(docs)
+            }
         })
         .catch((err) => {
             console.log(err);

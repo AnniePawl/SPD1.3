@@ -35,6 +35,11 @@ app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'hbs');
 
 //Middleware stuff
+function defaultContentTypeMiddleware (req, res, next) {
+  req.headers['content-type'] = req.headers['content-type'] || 'text/html';
+  next();
+}
+app.use(defaultContentTypeMiddleware);
 app.use(bodyParser.urlencoded({ extended: false}));
 app.use(methodOverride('_method'));
 app.use(bodyParser.json())
