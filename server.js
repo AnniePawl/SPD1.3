@@ -31,7 +31,8 @@ connection.on('error', console.error.bind(console, 'connection error:'));
 
 //Handlebars stuff
 // app.engine('hbs', exphbs({defaultLayout: 'main', extname: '.hbs', helpers: {moment: moment}}));
-// app.set('view engine', 'hbs');
+app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+app.set('view engine', 'hbs');
 
 //Middleware stuff
 app.use(bodyParser.urlencoded({ extended: false}));

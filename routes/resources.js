@@ -33,7 +33,8 @@ module.exports = app => {
         // console.log(gfs);
         Resource.find().distinct('category')
         .then((categories) => {
-            res.json(categories)
+            // res.json(categories)
+            res.render('category-index.handlebars', {categories: categories})
         })
         .catch(err => {
             console.log(err)
