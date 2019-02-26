@@ -7,56 +7,40 @@
     <!-- Import Style Sheet  -->
     <link rel="stylesheet" href="public/css/style.css">
 
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 </head>
 <body>
 
-<!--NAVBAR  -->
-<nav class = "topnav" id = "myTopnav">
-    <ul>
-    <!--DROP DOWN NAV -->
-        <li>
-            <a href="/acorns">My Acorns</a>
-            <ul class = "drop-menu">
-                <li>Make School</li>
-                <li>DIY Projects</li>
-                <li>Recipes</li>
-                <li>Recipes</li>
-                <li>Recipes</li>
-            </ul>
-        </li>
+    <nav class="navbar navbar-expand-lg navbar-dark indigo mb-4">
 
-        <form class="search-container">
-            <input type="text" id="search-bar" placeholder="SEARCH ACORNS">
-            <a href="#"><img class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a>
-          </form>
+      <!-- Navbar brand -->
+      <a class="navbar-brand" href="#">Squirrel Away</a>
 
-        <li>
-            <a href="/">Squirrel</a>
-            <ul class = "drop-menu about-menu">
-                <li>My Account</li>
-                <li>Learn More</li>
-                <li>FAQs</li>
-            </ul>
-        </li>
+      <!-- Links -->
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Account</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Acorns</a>
+          </li>
 
-<!--RESPONSIVE HAMBURGER MENU/TOGGLE -->
-        <div id="menuToggle">
-            <li class="responsive-menu">
-            <input type="checkbox" />
-            <div class="hamburger">
-                <!-- Spans will create hamburger lines  -->
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-                <ul id="menu">
-                    <li><a href="/">Squirrel</a></li>
-                    <li><a href="/bookmark">My Acorns </a></li>
-                </ul>
-            </li>
-         </div>
-    </ul>
-</nav>
+      <!-- Collapsible content -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <form class="form-inline ml-auto">
+          <div class="md-form my-0">
+            <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+          </div>
+          <button href="#!" class="btn btn-outline-white btn-md my-0 ml-sm-2" type="submit">Search Acorns</button>
+        </form>
+
+      </div>
+      <!-- Collapsible content -->
+
+    </nav>
+
 
 
 </body>
