@@ -1,23 +1,37 @@
-<!--NAVBAR  (just) FOR LANDING PAGE-->
+<!-- LANDING PAGE NAV BAR  -->
+
+<!--DROP DOWN NAV -->
 <nav class = "topnav" id = "myTopnav">
     <ul>
-    <!--DROP DOWN NAV -->
         <li>
-            <a href="/acorns">ACORNS</a>
+            <a href="/">Squirrel Away</a>
+            <!-- TO DO: Link to right part of page -->
             <ul class = "drop-menu">
-                <li>Make School</li>
-                <li>DIY Projects</li>
-                <li>Recipes</li>
-                <li>Recipes</li>
-                <li>Recipes</li>
+                <li><a href="url">The Mission</a></li>
+                <li><a href="url">The Design</a></li>
+                <li><a href="url">The Team</a></li>
+                <li><a href="url">FAQs</a></li>
             </ul>
         </li>
 
-        <li>
-            <a href="/">Squirrel</a>
-            <ul class = "drop-menu about-menu">
-                <li>My Account</li>
-                <li>Learn More</li>
-                <li>FAQs</li>
-            </ul>
-        </li>
+<!--RESPONSIVE HAMBURGER MENU/TOGGLE -->
+        <div id="menuToggle">
+            <li class="responsive-menu">
+            <input type="checkbox" />
+            <div class="hamburger">
+                <!-- Spans will create hamburger lines  -->
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+                <ul id="menu">
+                    <!-- TO DO: Link to right part of page -->
+                    <li><a href="url">The Mission</a></li>
+                    <li><a href="url">The Design</a></li>
+                    <li><a href="url">The Team</a></li>
+                    <li><a href="url">FAQs</a></li>
+                </ul>
+            </li>
+         </div>
+    </ul>
+</nav>

@@ -9,7 +9,9 @@ body {
     height: 100%;
     font-size: 18px;
     font-family: 'Open Sans', sans-serif;
-    background: linear-gradient(white, #224175)fixed;
+    background: #224175;
+    /* Linear Gradient?*/
+    /* background: linear-gradient(white, #224175)fixed; */
 }
 
 /* Style Links */
