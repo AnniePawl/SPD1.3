@@ -30,10 +30,6 @@ module.exports = app => {
     //     });
     // })
 
-    app.get('/', (req, res) => {
-        res.render('home.handlebars')
-    })
-
     app.get('/resources', (req, res) => {
         // console.log('entered /');
         // console.log(gfs);

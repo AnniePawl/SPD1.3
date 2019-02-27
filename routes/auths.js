@@ -5,6 +5,10 @@ var contentType = require('content-type')
 
 module.exports = app => {
 
+    app.get('/', (req, res) => {
+        res.render('home.handlebars')
+    })
+
     app.get('/sign-up', (req, res) => {
       // console.log('res locals are: ');
       // console.log(res.locals);
