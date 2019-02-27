@@ -11,6 +11,40 @@ body {
     background: white;
 }
 
+/* h4 Styles (The Team, names)  */
+
+h2 {
+ margin-top: 1em;
+ color:#204272;
+ text-decoration: none;
+ font-family: 'Montserrat', sans-serif; sans-serif;
+ text-align: left;
+ padding: .1em;
+ text-transform: uppercase;
+}
+
+h4 {
+    color:#204272;
+    padding: .2em;
+    font-weight: bolder;
+}
+
+h5 {
+    color:#2a569e;
+    padding: .2em;
+
+}
+
+/* Mini Bio Styles */
+p {
+    padding: .2em;
+}
+
+p.description {
+    font-size: 18px;
+    padding: .3em;
+}
+
 /* Style Navbar */
 .navbar {
     width: 100%;
@@ -24,14 +58,64 @@ body {
     margin-top: 15vh;
     margin-right: auto;
     margin-left: auto;
+    margin-bottom: 20em;
  }
 
-/* Signup Link */
-.signup-link{
+ a.signup-link {
+     text-align: center;
+     text-transform: uppercase;
+     font-size: 1.5em;
+     color:#204272;
+     text-decoration: none;
 
+ }
+
+ a.signup-link:hover {
+     text-align: center;
+     text-transform: uppercase;
+     font-size: 1.5em;
+     color:white;
+
+ }
+
+
+ a.login-link {
+     text-align: center;
+     text-transform: uppercase;
+     font-size: 1.3em;
+     color:#204272;
+ }
+
+ .signup-and-login-container {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     width: 30vw;
+     margin: auto;
+     
+
+ }
+.btn {
+    margin: 1em;
 }
+/* Signup Link Container Styles*/
+/* .signup-link-container {
+    width: 20%;
+    margin:auto;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 5px;
+    padding: 1em;
 
-/* Login Link */
-.login-link {
+} */
 
-}
+/* Login Link Container Styles*/
+/* .login-link-container {
+    width: 20%;
+    margin:auto;
+    border: 1px solid #152c4c;
+    text-align: center;
+    border-radius: 5px;
+    padding: 1em;
+
+} */
