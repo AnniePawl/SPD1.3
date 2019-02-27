@@ -47,6 +47,7 @@ app.use(defaultContentTypeMiddleware);
 app.use(bodyParser.urlencoded({ extended: false}));
 app.use(methodOverride('_method'));
 app.use(bodyParser.json())
+app.use(express.static('public'))
 app.use(cookieParser())
 
 //custom Middleware

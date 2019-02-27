@@ -1,0 +1,93 @@
+html {
+    height: 100%;
+}
+
+/* Style Body */
+body {
+    margin: 0;
+    height: 100%;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(#506db7, #182f5b)fixed;
+}
+.navbar {
+    width: 100%;
+}
+
+.signup-heading{
+    padding:.5em;
+}
+/* Signup Form Styles  */
+/*Form Styles*/
+.signup-section {
+    padding-top: 1vh;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    color: black;
+    text-align: center;
+    }
+
+form {
+    padding:2em;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    opacity:.95;
+}
+
+/*Input Hover Style */
+form input:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Changes field when clicked */
+form input:focus {
+  background-color: white;
+  width: 300px;
+  color: black;
+}
+
+/*Style Login/Register Buttons*/
+.post-button {
+    margin-bottom: 10px;
+}
+form button {
+  appearance: none;
+  outline: 0;
+  background-color: white;
+  border: 0;
+  padding: 10px 15px;
+  color: gray;
+  text-transform: uppercase;
+  border-radius: 3px;
+  width: 250px;
+  cursor: pointer;
+  font-size: 15px;
+  transition-duration: 0.25s;
+}
+
+/*Button Hover Styles*/
+form button:hover {
+background-color: #dedfe0;
+}
+
+.category-menu {
+    position: absolute;
+
+}
+.category-menu-selected {
+
+}
+
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
