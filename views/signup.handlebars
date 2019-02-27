@@ -1,22 +1,22 @@
 <div class="signup-container">
-    
-    <form>
+
+    <form action="/sign-up" method="POST">
 
         <h1 class="signup-heading">SIGN UP</h1>
 
         <!-- Name -->
         <div class="form-group">
-            <input class="form-control" id="username" type="text" name="username" placeholder="Your Name" value="{{username}}"/>
+            <input class="form-control" id="name" type="text" name="name" placeholder="Your Name"/>
         </div>
 
-        <!-- Email -->
+        <!-- Username -->
         <div class="form-group">
-            <input class="form-control" id="email" type="text" placeholder="Your Email" name="email" value="{{email}}"/>
+            <input class="form-control" id="username" type="text" placeholder="User Name" name="username"/>
         </div>
 
         <!-- Password -->
         <div class="form-group">
-            <input class="form-control" id="password" type="text" name="password" placeholder="Create a Password" value="{{password}}"/>
+            <input class="form-control" id="password" type="text" name="password" placeholder="Create a Password"/>
         </div>
 
         <!--Sign Up Form -->

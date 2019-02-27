@@ -42,7 +42,7 @@ module.exports = app => {
         .then((categories) => {
             // res.json(categories)
             if (obj.type == "text/html"){
-                res.render('home.handlebars', {categories: categories})
+                res.render('category-index.handlebars', {categories: categories})
             } else {
                 res.json(categories)
             }
