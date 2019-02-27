@@ -1,25 +1,26 @@
-<form>
-    <h1 class="signup-heading">SIGN UP</h1>
-  <!-- Name -->
-  <div class="form-group">
-    <!-- <label for="username">Username</label><br> -->
-    <input class="form-control" id="username" type="text" name="title" placeholder="Enter your Name" value="{{username}}"/>
-  </div>
+<div class="signup-container">
+    
+    <form>
 
-  <!-- Email -->
-  <div class="form-group">
-      <!-- <label for="email">Enter Your Email</label><br> -->
-      <input class="form-control" id="email" type="text" placeholder="Enter Your Email" name="email" value="{{email}}" />
-  </div>
+        <h1 class="signup-heading">SIGN UP</h1>
 
-  <!-- Password -->
-  <div class="form-group">
-      <!-- <label for="password">Create a Password</label><br> -->
-      <input class="form-control" id="password" type="text" name="password" placeholder="Create a Password" value="{{password}}" />
-  </div>
+        <!-- Name -->
+        <div class="form-group">
+            <input class="form-control" id="username" type="text" name="username" placeholder="Your Name" value="{{username}}"/>
+        </div>
 
-  <button class="btn btn-primary" type="submit">Submit</button>
-</form>
+        <!-- Email -->
+        <div class="form-group">
+            <input class="form-control" id="email" type="text" placeholder="Your Email" name="email" value="{{email}}"/>
+        </div>
 
+        <!-- Password -->
+        <div class="form-group">
+            <input class="form-control" id="password" type="text" name="password" placeholder="Create a Password" value="{{password}}"/>
+        </div>
 
+        <!--Sign Up Form -->
+        <button class="btn btn-primary" type="submit">Sign Up</button>
+
+    </form>
 </div>
