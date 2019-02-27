@@ -1,105 +1,98 @@
+
 html {
     height: 100%;
 }
+
+/* Style Body */
 
 body {
     margin: 0;
     height: 100%;
     font-size: 18px;
     font-family: 'Open Sans', sans-serif;
-    /* background: white; */
-    background: linear-gradient(white, #FF9486)fixed;
+    background: linear-gradient(#506db7, #182f5b)fixed;
 }
+
+/* Style Links */
  a {
      color:black;
      text-decoration: none;
      font-family: 'Open Sans', sans-serif;
      font-size: 1.5em;
-
  }
 
- h1 {
+a.new-acorn-heading {
+    color:white;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2em;
+}
+
+/* Style Headers */
+ h3 {
      margin-top: .5em;
-     color:black;
+     color:white;
      text-decoration: none;
      font-family: 'Open Sans', sans-serif;
      font-size: 3em;
      text-align: center;
+ }
+
+ /* Home Section Styles */
+ h1.home-section {
+     color: white;
+     font-size: 5em;
+     text-transform: capitalize;
 
  }
 
- /*NAVIGATION BAR STYLES  */
-nav {
-    width: 100%;
-    height: 6em;
-    margin: 0 auto 0;
-    padding-top: 0px;
-    background: white;
+/* Card (Acorn) Styles */
+.card-body {
+    margin: 2em;
+
 }
 
-nav > ul {
-    list-style: none;
-    height: 6em;
-    margin-left: -1em;
-    text-transform: uppercase;
-}
+/* Search Bar Styles */
+ .search-container{
+   width: 490px;
+   display: block;
+   margin: 0 auto;
+ }
 
-nav >ul >li:first-child {
-    float: left;
-    margin-left: -2em;
-}
+ input#search-bar{
+   margin: 0 auto;
+   width: 100%;
+   height: 45px;
+   padding: 0 20px;
+   font-size: 1rem;
+   border: 1px solid #D0CFCE;
+   outline: none;
+   &:focus{
+     border: 1px solid #008ABF;
+     transition: 0.35s ease;
+     color: #008ABF;
+     &::-webkit-input-placeholder{
+       transition: opacity 0.45s ease;
+   	  opacity: 0;
+      }
+     &::-moz-placeholder {
+       transition: opacity 0.45s ease;
+   	  opacity: 0;
+      }
+     &:-ms-placeholder {
+      transition: opacity 0.45s ease;
+   	 opacity: 0;
+      }
+    }
+  }
 
-nav >ul >li {
-    float: right;
-    width: 200px;
-    height:5em;
-    line-height: 60px;
-    text-align: center;
-    position: relative;
-    font-size: 16px;
-    color: rgba(0, 0, 0, 0.7);
-    cursor: pointer;
-}
+ .search-icon{
+   position: relative;
+   float: right;
+   width: 75px;
+   height: 75px;
+   top: -62px;
+   right: -45px;
+ }
 
-nav > ul >li:hover {
-    background:none;
-    opacity: 40%;
-}
-
-ul.drop-menu {
-    position: absolute;
-    top: 100%;`
-    left: 0%;
-    width: 100%;
-    padding: 0;
-}
-
-ul.drop-menu li {
-    padding: 15px;
-    line-height: 1.4;
-    font-size: 14px;
-    background: #f9f9f9;
-    color: black;
-}
-
-ul.drop-menu li:hover {
-    background-color: #b2b5b7;
-}
-
-ul.drop-menu li:last-child {
-    border-radius: 0px 0px 5px 5px;
-}
-
-/* Hides Drop Menu unless Triggered */
-ul.drop-menu li {
-    display: none;
-}
-
-li:hover > ul.drop-menu li {
-    display: block;
-}
-
-li:hover > ul.drop-menu {
-    perspective: 1000px;
-    -webkit-animation: menu1 300ms ease-in-out forwards;
-}
+/* Contact Form Styles */

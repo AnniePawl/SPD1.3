@@ -1,17 +1,19 @@
 // #TODO: Implement authentication controller.
 const jwt = require('jsonwebtoken');
 const Auth = require('../models/auth.js');
+var contentType = require('content-type')
 
 module.exports = app => {
 
     app.get('/sign-up', (req, res) => {
       // console.log('res locals are: ');
       // console.log(res.locals);
-      const result = {
-        status: 200,
-        message: 'curl --cookie-jar cookies.txt -d "{"username":"username", "password":"password"}" -H "Content-Type: application/json" -X POST http://localhost:4040/api/auth/sign-up'
-      };
-      res.json(result);
+      // const result = {
+      //   status: 200,
+      //   message: 'curl --cookie-jar cookies.txt -d "{"username":"username", "password":"password"}" -H "Content-Type: application/json" -X POST http://localhost:4040/api/auth/sign-up'
+      // };
+      // res.json(result);
+      res.render('signup.handlebars')
     })
 
     app.post('/sign-up', (req, res) => {
@@ -28,11 +30,12 @@ module.exports = app => {
     })
 
     app.get('/login', (req, res) => {
-      const result = {
-        status: 200,
-        message: 'curl --cookie-jar cookies.txt -d "{"username":"username", "password":"password"}" -H "Content-Type: application/json" -X POST http://localhost:4040/api/auth/login'
-      };
-      res.json(result);
+      // const result = {
+      //   status: 200,
+      //   message: 'curl --cookie-jar cookies.txt -d "{"username":"username", "password":"password"}" -H "Content-Type: application/json" -X POST http://localhost:4040/api/auth/login'
+      // };
+      // res.json(result);
+      res.render('login.handlebars')
     })
 
     app.post('/login', (req, res) => {
