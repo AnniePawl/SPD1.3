@@ -8,11 +8,21 @@ body {
     height: 100%;
     font-size: 18px;
     font-family: 'Open Sans', sans-serif;
-    background: linear-gradient(#506db7, #182f5b)fixed;
+    background: white;
+    /* background: linear-gradient(#506db7, #182f5b)fixed; */
 }
 .navbar {
     width: 100%;
 }
+
+.squirrel-away-hero {
+    width: 40vw;
+    height: auto;
+    display: block;
+    margin-top: 20vh;
+    margin-right: auto;
+    margin-left: auto;
+ }
 
 .signup-heading{
     padding:.5em;

@@ -28,6 +28,19 @@ a.new-acorn-heading {
     font-size: 2em;
 }
 
+/* New Acorn Button Styles */
+.new-acorn-button-container {
+
+}
+
+.new-acorn-button {
+    background: white;
+    margin:1em;
+    padding:1em;
+    
+}
+
+
 /* Style Headers */
  h3 {
      margin-top: .5em;
