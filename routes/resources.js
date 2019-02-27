@@ -29,11 +29,16 @@ module.exports = app => {
     //         console.log(err)
     //     });
     // })
+
     app.get('/', (req, res) => {
+        res.render('home.handlebars')
+    })
+
+    app.get('/resources', (req, res) => {
         // console.log('entered /');
         // console.log(gfs);
         var obj = contentType.parse(req)
-        Resource.find().distinct('category')
+        Resource.find({ user: req.user._id}).distinct('category')
         .then((categories) => {
             // res.json(categories)
             if (obj.type == "text/html"){
@@ -51,7 +56,7 @@ module.exports = app => {
         console.log('entered search');
         searchTerm = req.query.searchTerm
         console.log(searchTerm);
-        Resource.find({ $text : {$search: searchTerm} })
+        Resource.find({ $text : {$search: searchTerm}, user: req.user._id})
         .then((searchResult) => {
             res.json(searchResult);
         })
@@ -111,6 +116,7 @@ module.exports = app => {
 
     // CREATE
     app.post('/resources', (req, res) => {
+        req.body.user = req.user._id;
         console.log("req.body:", req.body)
         var obj = contentType.parse(req)
         console.log(obj);
@@ -128,7 +134,7 @@ module.exports = app => {
         })
     })
 
-    // SHOW
+    // SHOW #TODO: Modify so that user has to match
     app.get('/resources/:id', (req, res) => {
         var obj = contentType.parse(req)
         Resource.findById(req.params.id)
@@ -152,7 +158,7 @@ module.exports = app => {
         })
     })
 
-    // UPDATE
+    // UPDATE #TODO: Modify so that user has to match
     app.put('/resources/:id', (req, res) => {
         var obj = contentType.parse(req)
         Resource.findByIdAndUpdate(req.params.id, req.body)
@@ -168,7 +174,7 @@ module.exports = app => {
         })
     })
 
-    // DELETE
+    // DELETE #TODO: Modify so that user has to match
     app.delete('/resources/:id', function(req, res) {
         console.log('deleted')
         var obj = contentType.parse(req)
@@ -187,7 +193,7 @@ module.exports = app => {
 
     app.get('/:category', (req, res) => {
         var obj = contentType.parse(req)
-        Resource.find({category: req.params.category})
+        Resource.find({category: req.params.category, user: req.user._id})
         .then((docs) => {
             // res.json(docs)
             if (obj.type == "text/html"){

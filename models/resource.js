@@ -6,7 +6,8 @@ const ResourceSchema = new Schema({
     url: {type: String, required: true},
     image: {type: String},
     notes: {type: String},
-    category: {type: String}
+    category: {type: String},
+    user: { type: Schema.Types.ObjectId, ref: 'Auth', required: true }
 })
 
 ResourceSchema.index({name: 'text', notes: 'text', category: 'text'});

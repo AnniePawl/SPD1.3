@@ -18,13 +18,18 @@
   },
   "homepage": "https://github.com/AnniePawl/SPD1.3#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
     "content-type": "^1.0.4",
+    "cookie-parser": "^1.4.4",
+    "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "express-handlebars": "^3.0.0",
     "fs": "0.0.1-security",
     "gridfs-stream": "^1.1.1",
+    "jsonwebtoken": "^8.5.0",
     "method-override": "^3.0.0",
-    "mongoose": "^5.4.9"
+    "mongoose": "^5.4.9",
+    "underscore": "^1.9.1"
   }
 }
