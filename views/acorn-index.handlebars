@@ -1,14 +1,26 @@
 <!-- ACORN INDEX-->
 
-<h1>Your Acorns</h1>
+<a class="new-acorn-heading" href="/resources/new">Create a New Acorn</a>
 
-<a href="/resources/new">New Acorn!</a>
+<div class="card-container">
+    <div class="row">
+        {{#each acorns}}
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{this.name}}</h5>
+                <p class="card-text">{{this.notes}}</p>
+                <a href="{{this.url}}" class="card-link">Card link</a>
+                <p><a href="/resources/{{this._id}}/edit">Edit</a></p>
+                <p><form method="POST" action="/resources/{{this._id}}?_method=DELETE">
+                <button class="btn btn-primary" type="submit">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
 
-<div class="row">
-    {{#each acorns}}
-  <div class="col-sm-3">
+  <!-- <div class="col-sm-3">
     <h2><a href="/resources/{{this._id}}">{{this.name}}</a></h2>
     <small>{{this.category}}</small>
-  </div>
+  </div> -->
 {{/each}}
 </div>

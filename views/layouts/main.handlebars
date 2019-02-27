@@ -1,6 +1,3 @@
-<!-- LAYOUT TEMPLATE/SUPER TEMPLATE -->
-<!-- All other templates inherit from main.handlebars -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,10 +7,7 @@
     <title>Squirrel Away</title>
 
     <!-- Import Style Sheet  -->
-    <link rel="stylesheet" href="public/css/style.css">
-
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
 
     <!-- Import Fonts (later)-->
 
@@ -23,11 +17,7 @@
 </head>
 
 <body>
-
-    <!-- Render Navbar on every page -->
     {{> navbar}}
-
-    <!-- {{{body}}} (for later) -->
     <div class="container">
     {{{body}}}
     </div>

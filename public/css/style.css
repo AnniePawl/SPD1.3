@@ -1,17 +1,16 @@
-/* Style Page  */
+
 html {
     height: 100%;
 }
 
 /* Style Body */
+
 body {
     margin: 0;
     height: 100%;
     font-size: 18px;
     font-family: 'Open Sans', sans-serif;
-    background: #224175;
-    /* Linear Gradient?*/
-    /* background: linear-gradient(white, #224175)fixed; */
+    background: linear-gradient(#506db7, #182f5b)fixed;
 }
 
 /* Style Links */
@@ -21,6 +20,13 @@ body {
      font-family: 'Open Sans', sans-serif;
      font-size: 1.5em;
  }
+
+a.new-acorn-heading {
+    color:white;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2em;
+}
 
 /* Style Headers */
  h1 {
@@ -39,6 +45,12 @@ body {
      text-transform: capitalize;
 
  }
+
+/* Card (Acorn) Styles */
+.card-body {
+    margin: 2em;
+
+}
 
 /* Search Bar Styles */
  .search-container{
@@ -83,91 +95,4 @@ body {
    right: -45px;
  }
 
-
-/* NAVIGATION BAR STYLES */
-
-/* Style Nav */
-nav {
-    width: 100%;
-    height: 6em;
-    margin: 0 auto 0;
-    padding-top: 0px;
-    background: white;
-}
-
-/* Style Nav Items */
-nav > ul {
-    list-style: none;
-    height: 6em;
-    margin-left: -1em;
-    text-transform: uppercase;
-}
-
-/* First List Item Float Left   */
-nav >ul >li:first-child {
-    float: left;
-    margin-left: -2em;
-}
-
-/* Second List Item Float Right */
-nav >ul >li {
-    float: right;
-    width: 200px;
-    height:5em;
-    line-height: 60px;
-    text-align: center;
-    position: relative;
-    font-size: 16px;
-    color: rgba(0, 0, 0, 0.7);
-    cursor: pointer;
-}
-
-/* List Item Hover Style */
-nav > ul >li:hover {
-    background:nonema
-    opacity: 40%;
-}
-
-/* Style Drop-Down Menu  */
-ul.drop-menu {
-    position: absolute;
-    top: 100%;`
-    left: 0%;
-    width: 100%;
-    padding: 0;
-}
-
-/* Style Drop-Down Menu List Items */
-ul.drop-menu li {
-    padding: 15px;
-    line-height: 1.4;
-    font-size: 14px;
-    background: #f9f9f9;
-    color: black;
-}
-
-/* List Item Hover Styles  */
-ul.drop-menu li:hover {
-    background-color: #b2b5b7;
-}
-
-/* Curve Last Item's Bottom corners, looks nice */
-ul.drop-menu li:last-child {
-    border-radius: 0px 0px 5px 5px;
-}
-
-/* Hides Drop Menu unless Triggered */
-ul.drop-menu li {
-    display: none;
-}
-
-/* Style Drop Down */
-li:hover > ul.drop-menu li {
-    display: block;
-}
-
-/* Drop Down Item Hover Styles  */
-li:hover > ul.drop-menu {
-    perspective: 1000px;
-    -webkit-animation: menu1 300ms ease-in-out forwards;
-}
+/* Contact Form Styles */

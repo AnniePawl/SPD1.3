@@ -43,6 +43,7 @@ app.use(defaultContentTypeMiddleware);
 app.use(bodyParser.urlencoded({ extended: false}));
 app.use(methodOverride('_method'));
 app.use(bodyParser.json())
+app.use(express.static('public'))
 
 //Note to self don't need app.use if you write the code like this it can call it from this style
 require('./routes/resources')(app);

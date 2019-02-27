@@ -1,6 +1,3 @@
-/* HOME PAGE STYLES */
-
-/* Style Page  */
 html {
     height: 100%;
 }
@@ -11,141 +8,86 @@ body {
     height: 100%;
     font-size: 18px;
     font-family: 'Open Sans', sans-serif;
-    background: #224175;
-    /* Linear Gradient Option */
-    /* background: linear-gradient(white, #224175)fixed; */
+    background: linear-gradient(#506db7, #182f5b)fixed;
+}
+.navbar {
+    width: 100%;
 }
 
-/* Squirrel Away Title*/
-.squirrel-away-title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.signup-heading{
+    padding:.5em;
 }
-
-/* Signup Section  */
+/* Signup Form Styles  */
+/*Form Styles*/
 .signup-section {
+    padding-top: 1vh;
+    margin-top: 5px;
     display: flex;
-    align-items: center;
     justify-content: center;
-}
-
-/* Mission Section */
-.mission-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Design Section */
-.design-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-/* Team Section */
-.team-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* FAQ Section */
-.faq-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-
-
-/* CUSTOM HOME NAVIGATION BAR STYLES */
-
-/* Style Nav */
-nav {
-    width: 100%;
-    height: 6em;
-    margin: 0 auto 0;
-    padding-top: 0px;
-    background: white;
-}
-
-/* Style Nav Items */
-nav > ul {
-    list-style: none;
-    height: 6em;
-    margin-left: -1em;
-    text-transform: uppercase;
-}
-
-/* First List Item Float Left   */
-nav >ul >li:first-child {
-    float: left;
-    margin-left: -2em;
-}
-
-/* Second List Item Float Right */
-nav >ul >li {
-    float: right;
-    width: 200px;
-    height:5em;
-    line-height: 60px;
-    text-align: center;
-    position: relative;
-    font-size: 16px;
-    color: rgba(0, 0, 0, 0.7);
-    cursor: pointer;
-}
-
-/* List Item Hover Style */
-nav > ul >li:hover {
-    background:nonema
-    opacity: 40%;
-}
-
-/* Style Drop-Down Menu  */
-ul.drop-menu {
-    position: absolute;
-    top: 100%;`
-    left: 0%;
-    width: 100%;
-    padding: 0;
-}
-
-/* Style Drop-Down Menu List Items */
-ul.drop-menu li {
-    padding: 15px;
-    line-height: 1.4;
-    font-size: 14px;
-    background: #f9f9f9;
     color: black;
+    text-align: center;
+    }
+
+form {
+    padding:2em;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    opacity:.95;
 }
 
-/* List Item Hover Styles  */
-ul.drop-menu li:hover {
-    background-color: #b2b5b7;
+/*Input Hover Style */
+form input:hover {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
-/* Curve Last Item's Bottom corners, looks nice */
-ul.drop-menu li:last-child {
-    border-radius: 0px 0px 5px 5px;
+/* Changes field when clicked */
+form input:focus {
+  background-color: white;
+  width: 300px;
+  color: black;
 }
 
-/* Hides Drop Menu unless Triggered */
-ul.drop-menu li {
-    display: none;
+/*Style Login/Register Buttons*/
+.post-button {
+    margin-bottom: 10px;
+}
+form button {
+  appearance: none;
+  outline: 0;
+  background-color: white;
+  border: 0;
+  padding: 10px 15px;
+  color: gray;
+  text-transform: uppercase;
+  border-radius: 3px;
+  width: 250px;
+  cursor: pointer;
+  font-size: 15px;
+  transition-duration: 0.25s;
 }
 
-/* Style Drop Down */
-li:hover > ul.drop-menu li {
-    display: block;
+/*Button Hover Styles*/
+form button:hover {
+background-color: #dedfe0;
 }
 
-/* Drop Down Item Hover Styles  */
-li:hover > ul.drop-menu {
-    perspective: 1000px;
-    -webkit-animation: menu1 300ms ease-in-out forwards;
+.category-menu {
+    position: absolute;
+
+}
+.category-menu-selected {
+
+}
+
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
 }
