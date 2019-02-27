@@ -29,9 +29,9 @@ a.new-acorn-heading {
 }
 
 /* Style Headers */
- h1 {
+ h3 {
      margin-top: .5em;
-     color:black;
+     color:white;
      text-decoration: none;
      font-family: 'Open Sans', sans-serif;
      font-size: 3em;
