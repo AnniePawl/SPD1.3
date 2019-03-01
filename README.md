@@ -21,10 +21,20 @@ To squirrel something away means to stow it someplace safe, especially for futur
 </br> </br>
 **[Jason Romulus](https://github.com/jasonromulus)** </br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Roles:** Backend Engineer</br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Technologies:** 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Technologies:** Node.js, AWS
 
 # The iOS Application
 Check out the accompanying **[iOS Application Repository](https://github.com/RinniSwift/Squirrel)**. 
 
-# Technologies
+# Built With
+**Adobe Illustrator & Adobe Xd:** These are used for design graphics.
+**Handlebars:** This is the frontend templete engine.
+**MongoDB:** This is for the backend server.
+**Node.js:** This is a falvor of javascript.
+**Swift:** Apple's mobile programing languange for iOS
+**AWS (Amazon Web Services):** We are using this to host and save documents for the project.
 
+# Using Locally
+When you clone this to your computer you will need to install the dependecies. TO install all the dependices at once please run `npm install`.
+Once that is finsihed you can type `nodemon server.js` and the server will say "Listening on 3000".
+When you need to kill the server run the command `Ctrl + C`.
