@@ -1,0 +1,17 @@
+body {
+    background: linear-gradient(white,  #152c4c )fixed;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif; sans-serif;
+    color: white;
+    text-align: center;
+    margin-top: 15vh;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: colun;
+    align-items: center;
+    justify-content: center;
+}

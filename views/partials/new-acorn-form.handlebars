@@ -1,45 +1,58 @@
 <!-- Rereference Stylesheet  -->
-<link rel="stylesheet" href="/css/form.css">
+<link rel="stylesheet" href="/css/form-style.css">
 
-<!-- NEW ACORN FORM -->
-<div class = form-container>
+
+<div class="flex-container">
+
+    <!--Create a New Acorn Heading -->
     <h1 class="new-acorn-heading">Create a New Acorn</h1>
-    <div class= new_acorn_form>
 
-  <!-- ACORN TITLE -->
-      <div class="form-group">
-        <label for="acorn-name"> </label><br>
-        <input type="text" class="form-control" id="acorn-name" name="name" placeholder="Acorn Name"/>
-      </div>
+    <!-- NEW ACORN FORM -->
+    <div class = form-container>
 
-      <!-- ACORN DESCRIPTION -->
-      <div class="form-group">
-        <label for="description"></label><br>
-        <textarea class="form-control" id="acorn-description" name="notes" placeholder="Add a Brief Description of You New Acorn" rows="10" cols="45" /></textarea>
-      </div>
+        <!-- <div class= new_acorn_form> -->
+
+      <!-- ACORN TITLE -->
+          <div class="form-group">
+            <label for="acorn-name"> </label><br>
+            <input type="text" class="form-control" id="acorn-name" name="name" placeholder="Name Your Acorn"/>
+          </div>
+
+          <!-- ACORN DESCRIPTION -->
+          <div class="form-group">
+            <label for="description"></label><br>
+            <textarea class="form-control" id="acorn-description" name="notes" placeholder="Add a Brief Description of Your New Acorn" rows="10" cols="45" /></textarea>
+          </div>
 
 
-      <!-- ACORN URL -->
-      <div class="form-group">
-        <label for="acorn-url"></label><br>
-        <input class="form-control" id="acorn-url" type="text" name="url" placeholder="Acorn URL"/>
-      </div>
+          <!-- ACORN URL -->
+          <div class="form-group">
+            <label for="acorn-url"></label><br>
+            <input class="form-control" id="acorn-url" type="text" name="url" placeholder="Acorn URL"/>
+          </div>
 
-      <!-- ACORN CATEGORY -->
-      <!--Value? -->
-      <div class="form-group">
-          <label for="acorn-category"></label><br>
-          <input class="form-control" id="acorn-category" type="text" name="category" placeholder="Acorn Category"/>
-        <!-- <select id="category" name="category" selected="{{ category }}"> -->
-            <!-- FILLER - can we populate this w/ real data? -->
-          <!-- <option value="make-school">Make School</option>
-          <option value="psychology">DIY</option>
-        </select> -->
-      </div>
+          <!-- ACORN CATEGORY -->
+          <!--Value? -->
+          <div class="form-group">
+              <label for="acorn-category"></label><br>
+              <input class="form-control" id="acorn-category" type="text" name="category" placeholder="Acorn Category"/>
+            <!-- <select id="category" name="category" selected="{{ category }}"> -->
+                <!-- FILLER - can we populate this w/ real data? -->
+              <!-- <option value="make-school">Make School</option>
+              <option value="psychology">DIY</option>
+            </select> -->
+          </div>
 
-        <!--ACORN IMAGE UPLOAD  -->
-        <!-- <div class="form-group">
-            <input class="form-control" id="acornImg" type="file" name="acornImg" accept="image/*" value="{{acorn.acornImg}}" />
-        </div> -->
-    </div>
+         <div class="form-group">
+            <label style= "color:#eff0f2"> Add an Image (optional)</label>
+            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+        </div>
+
+            <!--ACORN IMAGE UPLOAD  -->
+            <!-- <div class="form-group">
+                <input class="form-control" id="acornImg" type="file" name="acornImg" accept="image/*" value="{{acorn.acornImg}}" />
+            </div> -->
+        </div>
+    <!-- </div> -->
+
 </div>

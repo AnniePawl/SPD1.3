@@ -52,70 +52,52 @@ p.description {
 
 /* "Welcome to Squirrel Away" */
 .squirrel-away-hero {
-    width: 40vw;
+    width: 30vw;
     height: auto;
     display: block;
     margin-top: 15vh;
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 20em;
+    margin-bottom: 5em;
  }
 
  a.signup-link {
      text-align: center;
-     text-transform: uppercase;
-     font-size: 1.5em;
-     color:#204272;
+     font-size: 1em;
+     color:#f2f2f2;
      text-decoration: none;
 
+
  }
+
 
  a.signup-link:hover {
-     text-align: center;
-     text-transform: uppercase;
-     font-size: 1.5em;
-     color:white;
-
+     color: #a6daf4;
  }
 
+ a.signup-link:after {
+      color:#a6daf4;
 
- a.login-link {
-     text-align: center;
-     text-transform: uppercase;
-     font-size: 1.3em;
-     color:#204272;
  }
 
  .signup-and-login-container {
      display: flex;
      flex-direction: column;
      justify-content: center;
-     width: 30vw;
+     width: 7vw;
+     height: auto;
      margin: auto;
-     
 
  }
+
 .btn {
-    margin: 1em;
+    /* background: #d63b6c; */
+    background: #6891a5;
+    margin: .5em;
 }
-/* Signup Link Container Styles*/
-/* .signup-link-container {
-    width: 20%;
-    margin:auto;
-    border: 1px solid black;
-    text-align: center;
-    border-radius: 5px;
-    padding: 1em;
 
-} */
-
-/* Login Link Container Styles*/
-/* .login-link-container {
-    width: 20%;
-    margin:auto;
-    border: 1px solid #152c4c;
-    text-align: center;
-    border-radius: 5px;
-    padding: 1em;
-
-} */
+.btn:active {
+  background-color: #5c84a8;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
