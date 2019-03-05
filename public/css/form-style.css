@@ -3,8 +3,15 @@ body {
 }
 
 h1 {
+    font-family: 'Montserrat', sans-serif; sans-serif;
     color: white;
-    /* color: #ad1169; */
     text-align: center;
     margin-top: 15vh;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: colun;
+    align-items: center;
+    justify-content: center;
 }

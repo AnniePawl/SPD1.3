@@ -34,7 +34,7 @@ body {
 
 }
 .btn {
-   background: #6891a5;
+   background: #ad1169;
    margin: .5em;
 }
 
@@ -87,10 +87,13 @@ h1.login-heading, .signup-heading {
 
 }
 
-/* New Acorn Button Styles */
-.new-acorn-button-container {
-    width:50%;
-    margin: auto;
+
+.new-acorn-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-left: -10vw;
+    margin-top: 1.5em;
 }
 
 /* New Acorn Button */
@@ -138,11 +141,9 @@ h1.made-new-acorn1 {
 /*Acorn on Create New page  */
 .big-acorn1 {
     display: block;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: auto;
-    margin-right: auto;
-    width: 5%;
+    margin-right: ;
+    margin-left: -4em;
+    width: 4%;
 }
 
 /*Acorn Show Page */
@@ -150,12 +151,9 @@ h1.made-new-acorn1 {
     display: block;
     margin-top: 2em;
     margin-bottom: 1.5em;
-    margin-left: auto;
-    margin-right: auto;
-    width: 7%;
+    margin-left: -5em;
+    margin-right: 1em;
 }
-
-
 
 h3 {
  margin-top: .5em;
