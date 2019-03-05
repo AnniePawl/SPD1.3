@@ -24,9 +24,10 @@ module.exports = app => {
         const auth = new Auth(req.body);
         auth.save()
             .then((user) => {
-              const token = jwt.sign({ _id: user._id, username: user.username }, process.env.JWT_SECRET, { expiresIn: '60 days' });
-              res.cookie('nToken', token, { maxAge: 900000, httpOnly: true });
-              res.status(200).json(user.username);
+              // const token = jwt.sign({ _id: user._id, username: user.username }, process.env.JWT_SECRET, { expiresIn: '60 days' });
+              // res.cookie('nToken', token, { maxAge: 900000, httpOnly: true });
+              // res.status(200).json(user.username);
+              res.redirect('/login')
             })
             .catch((err) => {
               res.status(500).json({ status: 500, message: err.message });
@@ -57,7 +58,8 @@ module.exports = app => {
               }
               const token = jwt.sign({ _id: user._id, username }, process.env.JWT_SECRET, { expiresIn: '60 days' });
               res.cookie('nToken', token, { maxAge: 900000, httpOnly: true });
-              return res.status(200).json(user.username);
+              res.redirect('/resources')
+              // return res.status(200).json(user.username);
             });
             return 0;
           })
@@ -94,7 +96,8 @@ module.exports = app => {
 
     app.get('/logout', (req, res) => {
       res.clearCookie('nToken');
-      res.status(200).json({ status: 200, message: 'you are now logged out' });
+      res.redirect('/')
+      // res.status(200).json({ status: 200, message: 'you are now logged out' });
       // res.send('you are now logged out');
     })
 
