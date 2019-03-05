@@ -1,15 +1,35 @@
 <!-- ACORN SHOW -->
+<!-- Back Button -->
+<!-- <form>
+  <input class="back-button" type="button" value="Go back!" onclick="history.back()">
+</form> -->
 
-<a href="/">Back to Home</a>
-<div class="row">
-  <div class="col-sm-6 col-sm-offset-3">
-    <h1>{{acorn.name}}</h1>
-    <h2>{{acorn.category}}</h2>
-    <p>{{acorn.notes}}</p>
-    <p><a href="/resources/{{acorn._id}}/edit">Edit</a></p>
-    <p><form method="POST" action="/resources/{{acorn._id}}?_method=DELETE">
-        <button class="btn btn-primary" type="submit">Delete</button>
-    </form></p>
+<!-- Rereference Stylesheet  -->
+<h1 class="made-new-acorn">You Made a New Acorn</h1>
+<!-- Acorn Image -->
+<img class="big-acorn" src="/assets/big-acorn.png" alt="Squirrel Away Hero">
 
-  </div>
+
+ <div class="col-sm-6 col-sm-offset-3 mx-auto">
+    <h1 style="text-align:center;color: #204272;">{{acorn.name}}</h1>
+    <h3 style="text-align:center; color: #204272;">{{acorn.category}}</h3>
+    <p style="text-align:center; color: #204272;">{{acorn.notes}}</p>
+
+    <!-- Edit Acorn Link  -->
+
+    <p style="text-align:center; color: #204272;"><a class="edit-acorn-link" href="/resources/{{acorn._id}}/edit">Edit Acorn</a></p>
+
+
+    <div class="show-buttons">
+        <p style="text-align:center;">
+            <form method="POST" action="/resources/{{acorn._id}}?_method=DELETE">
+                <button class="btn btn-outline-dark" type="submit">Delete Acorn</button>
+            </form>
+        </p>
+
+        <form>
+          <input class="btn btn-outline-dark" type="button" value="Back to Acorns!" onclick="history.go(-2)">
+        </form>
+    </div>
+
 </div>

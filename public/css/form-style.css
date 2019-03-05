@@ -1,0 +1,10 @@
+body {
+    background: linear-gradient(white,  #152c4c )fixed;
+}
+
+h1 {
+    color: white;
+    /* color: #ad1169; */
+    text-align: center;
+    margin-top: 15vh;
+}
