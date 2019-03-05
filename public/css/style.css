@@ -20,20 +20,40 @@ body {
      font-size: 1.5em;
  }
 
+}
+.btn {
+   background: #6891a5;
+   margin: .5em;
+}
+
+.btn:active {
+ background-color: #5c84a8;
+ box-shadow: 0 5px #666;
+ transform: translateY(4px);
+}
+
+ .navbar-custom {
+     background-color: #152c4c;
+ }
+
  .signup-form {
      width: 30%;
+     /* float:right;
+     margin-top: -35em; */
      display: flex;
      flex-direction: column;
-     margin-top: -50%;
-     margin-left: 80%;
+     margin-top: -60%;
+     margin-left: 53vw;
  }
 
  .login-form {
      width: 30%;
+     /* float:right;
+     margin-top: -35em; */
      display: flex;
      flex-direction: column;
-     margin-top: -50%;
-     margin-left: 80%;
+     margin-top: -60%;
+     margin-left: 53vw;
  }
 
 /* New Acorn Heading  */
@@ -46,11 +66,13 @@ a.new-acorn-heading {
 
 h1.new-acorn-heading {
     padding: 1.4em;
+    color: #204272;
 }
 
 /* Acorn Pattern (for login/sign up pages)  */
 
 h1.login-heading, .signup-heading {
+    color: #204272;
     text-align: center;
     padding:1em;
 }
@@ -66,7 +88,8 @@ h1.login-heading, .signup-heading {
 
 /* New Acorn Button Styles */
 .new-acorn-button-container {
-
+    width:50%;
+    margin: auto;
 }
 
 /* New Acorn Button */
