@@ -6,6 +6,13 @@
 # The Mission
 To squirrel something away means to stow it someplace safe, especially for future use. Inspired by the squirrel and its notable habit of storing acorns for later, *Squirrel Away* aims to help users cache and manage an assortment of online resources from important links and forms to inspirational images and custom notes. 
 
+# Click on the live link
+Try out our site so you can test it for yourself.
+**[Squirrel Away](https://squirrelaway.herokuapp.com/)**
+
+# Check out our Mobile Compainion App
+Check out the accompanying **[iOS Application Repository](https://github.com/RinniSwift/Squirrel)**.
+
 # The Team
 **[Anna Pawl](https://github.com/AnniePawl)** </br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Roles:** Project Manager, Frontend Lead, UX and UI Designer </br>
@@ -21,10 +28,7 @@ To squirrel something away means to stow it someplace safe, especially for futur
 </br> </br>
 **[Jason Romulus](https://github.com/jasonromulus)** </br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Roles:** Backend Engineer</br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Technologies:** Node.js, AWS
-
-# The iOS Application
-Check out the accompanying **[iOS Application Repository](https://github.com/RinniSwift/Squirrel)**. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Technologies:** Node.js, AWS 
 
 # Built With
 **Adobe Illustrator & Adobe Xd:** These are used for design graphics.</br>
