@@ -39,9 +39,16 @@ root/
         |-- resource.model.js
 
 |
+|-- public/                     # assets and custom css
+      |-- assest/
+      |--css
+      
+      
+|
 |-- routes/                     # routes
       |-- auth.routes.js
       |-- resource.routes.js
+
 |
 |-- views/                      # handlebars templates
       |--layouts/
@@ -49,16 +56,18 @@ root/
       |-- partials/
       
 |
-|-- public/                     # static content
-      |-- img/
-|
 |-- env files                   # environment variables
 |-- server.js                   # server
 |-- README.md
 |-- squirrel.html
 ```
 
+# Screenshots
+To be added
 
+# User Journeys
+As a student with mediocre organization skills and a proclivity for too many tabs, **Squirrel Away** really helps me store a myriad of links, along with helpful comments to remind me why I was looking at them in the first place.
+ 
 # Built With
 **Adobe Illustrator & Adobe Xd:** These are used for design graphics.</br>
 **Handlebars:** This is the frontend templete engine.</br>
@@ -72,3 +81,6 @@ When you clone this to your computer you will need to install the dependecies.</
 To install all the dependices at once please run `npm install`.</br>
 Once that is finsihed you can type `nodemon server.js` and the server will say "Listening on 3000".</br>
 When you need to kill the server run the command `Ctrl + C`.</br>
+
+# Contact
+Dont be afraid to contact us if you have a question about this project. Dont forget to make an issue if you see something.
