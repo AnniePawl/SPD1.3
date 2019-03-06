@@ -1,13 +1,18 @@
 <!-- CATEGORY NEW -->
 
-<div class="row">
-    <div class="col-sm-6 col-sm-offset-3">
-          <form method="POST" action="/categories">
-              <label for="category-name"> </label><br>
-              <input type="text" class="form-control" id="category-name" name="category" placeholder="Name of Category"/>
-              <div class="form-group">
-                <button class="btn btn-outline-dark" type="submit">Create</button>
-              </div>
-          </form>
-      </div>
-</div>
+<!-- Category Heading -->
+<h1 class="new-category-heading">Create a New Category</h1>
+
+<!-- Acorn Image -->
+<img class="category-acorn" src="/assets/big-acorn.png" alt="acorn-image">
+
+
+<div class="category-item1 col-sm-6 col-sm-offset-3">
+      <form class= "new-category-form" method="POST" action="/categories">
+          <label for="category-name"> </label><br>
+          <input style="margin:2em;" type="text" class="form-control" id="category-name" name="category" placeholder="Name of Category"/>
+          <div class="form-group">
+            <button class="btn btn-outline-dark" type="submit">Create</button>
+          </div>
+      </form>
+  </div>

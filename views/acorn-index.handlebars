@@ -6,7 +6,10 @@
 
 </div>
 
-<div class="row">
+<div class="button-column">
+
+        <a class="btn btn-sm btn-outline-dark" href="/resources" role="button">Back to Categories</a>
+        
     <form action="/resources/new" method="get">
         <input type="hidden" name="category" value="{{cat}}">
         <button class=" btn-outline-dark btn-sm" type="submit">Create New Acorn</button>
@@ -14,7 +17,6 @@
     <!-- <form>
       <input class="btn-outline-dark btn-sm" type="button" value="Back to Categories!" onclick="history.back()">
     </form> -->
-    <a class="btn btn-sm btn-outline-dark" href="/resources" role="button">Back to Categories</a>
 </div>
 
 <!-- <div class="new-acorn-container">
@@ -28,7 +30,7 @@
         <input type="hidden" name="category" value="{{cat}}">
         <button class=" btn-outline-dark btn-sm new-acorn-button" type="submit">Create</button>
     </form>
-</div>
+</div>«»
 
 <div class="">
     <form>
@@ -37,7 +39,7 @@
 </div> -->
 
 <!-- Where Acorns Are Displayed -->
-<div class="row">
+<div class="row row-body">
 
 {{#each acorns}}
 <div class="card-container">

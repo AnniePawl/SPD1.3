@@ -48,15 +48,6 @@ body {
      background-color: #152c4c;
  }
 
- .signup-form {
-     width: 30%;
-     /* float:right;
-     margin-top: -35em; */
-     display: flex;
-     flex-direction: column;
-     margin-top: -60%;
-     margin-left: 53vw;
- }
 
  .login-form {
      width: 30%;
@@ -64,9 +55,19 @@ body {
      margin-top: -35em; */
      display: flex;
      flex-direction: column;
-     margin-top: -60%;
+     margin-top: -45vw;
      margin-left: 53vw;
  }
+
+.signup-form {
+    width: 30%;
+    /* float:right;
+    margin-top: -35em; */
+    display: flex;
+    flex-direction: column;
+    margin-top: -45vw;
+    margin-left: 53vw;
+}
 
 
 
@@ -76,6 +77,13 @@ h1.login-heading, .signup-heading {
     color: #204272;
     text-align: center;
     padding:1em;
+}
+
+h1.new-category-heading {
+    color: #204272;
+    text-align: center;
+    padding:1em;
+    font-family: 'Montserrat', sans-serif; sans-serif;
 }
 
 
@@ -117,7 +125,7 @@ h1.login-heading, .signup-heading {
 }
 
 h1.categories {
-    margin-top: .5em;
+    margin-top: 1em;
     margin-bottom: .4em;
     color:#204272;
 
@@ -161,11 +169,29 @@ h1.made-new-acorn1 {
     margin-right: 1em;
 }
 
+.new-acorn-row {
+    display: flex;
+    justify-content: center;
+
+}
+
+.category-item1 {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
 .category-acorn {
     display: block;
-    margin-top: 1em;
-    width: 3em;
+    width: 5vw;
+    margin:auto;
 
+}
+
+.new-category-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 h3 {
  margin-top: .5em;
@@ -206,8 +232,38 @@ a.edit-acorn-link::after
     align-items: center;
     justify-content: center;
 }
-.card-body {
+.card-container {
     margin: 2em;
 }
+
+.row-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.category-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 1em;
+}
+
+.category-row {
+    margin: 1em;
+    flex-wrap: wrap;
+}
+
+.category-items {
+    margin: 1em;
+    min-width: 25%;
+}
+
+.button-column {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 
 /* Contact Form Styles */
