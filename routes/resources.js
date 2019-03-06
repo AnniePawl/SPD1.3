@@ -54,11 +54,16 @@ module.exports = app => {
 
     app.get('/search', (req, res) => {
         console.log('entered search');
+        var obj = contentType.parse(req)
         searchTerm = req.query.searchTerm
         console.log(searchTerm);
         Resource.find({ $text : {$search: searchTerm}, user: req.user._id})
         .then((searchResult) => {
-            res.json(searchResult);
+            if (obj.type == "text/html"){
+                res.render('acorn-index.handlebars', {acorns: searchResult})
+            } else {
+                res.json(searchResult);
+            }
         })
         .catch((err) => {
             console.log(err);
