@@ -228,7 +228,7 @@ module.exports = app => {
         console.log(obj);
         Resource.findByIdAndRemove(req.params.id).then((resource) => {
             if (obj.type == "application/x-www-form-urlencoded"){
-                res.redirect('/')
+                res.redirect(`/${resource.category}`)
             } else {
                 res.json(resource)
             }

@@ -1,12 +1,28 @@
 <!-- ACORN INDEX-->
 
-<div class="new-acorn-container">
-    <!-- Acorn Image -->
+<div class="your-categories-container">
+
+    <h1 class="categories">{{cat}}</h1>
+
+</div>
+
+<div class="row">
+    <form action="/resources/new" method="get">
+        <input type="hidden" name="category" value="{{cat}}">
+        <button class=" btn-outline-dark btn-sm" type="submit">Create New Acorn</button>
+    </form>
+    <form>
+      <input class="btn-outline-dark btn-sm" type="button" value="Back to Categories!" onclick="history.back()">
+    </form>
+</div>
+
+<!-- <div class="new-acorn-container">
+    Acorn Image
     <img class="big-acorn1" src="/assets/big-acorn.png" alt="Squirrel Away Hero">
 
-    <!-- <h1 class="made-new-acorn1">Create a New Acorn</h1> -->
+    <h1 class="made-new-acorn1">Create a New Acorn</h1>
 
-    <!-- Create a New Acorn Button -->
+    Create a New Acorn Button
     <form action="/resources/new" method="get">
         <input type="hidden" name="category" value="{{cat}}">
         <button class=" btn-outline-dark btn-sm new-acorn-button" type="submit">Create</button>
@@ -17,28 +33,30 @@
     <form>
       <input class="btn-outline-dark btn-sm" type="button" value="Back to Categories!" onclick="history.back()">
     </form>
-</div>
+</div> -->
 
 <!-- Where Acorns Are Displayed -->
+<div class="row">
 
+{{#each acorns}}
 <div class="card-container">
-    <div class="row">
-        {{#each acorns}}
         <div class="card" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title">{{this.name}}</h5>
                 <p class="card-text">{{this.notes}}</p>
                 <a href="{{this.url}}" class="card-link">Card link</a>
                 <p><a href="/resources/{{this._id}}/edit">Edit</a></p>
-                <p><form method="POST" action="/resources/{{this._id}}?_method=DELETE">
-                <button class="btn btn-primary" type="submit">Delete</button>
+                <form method="POST" action="/resources/{{this._id}}?_method=DELETE">
+                    <button class="btn btn-primary" type="submit">Delete</button>
+                </form>
             </div>
         </div>
-    </div>
 </div>
 
   <!-- <div class="col-sm-3">
     <h2><a href="/resources/{{this._id}}">{{this.name}}</a></h2>
     <small>{{this.category}}</small>
   </div> -->
-{{/each}}
+  {{/each}}
+
+</div>
