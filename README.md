@@ -6,6 +6,13 @@
 # The Mission
 To squirrel something away means to stow it someplace safe, especially for future use. Inspired by the squirrel and its notable habit of storing acorns for later, *Squirrel Away* aims to help users cache and manage an assortment of online resources from important links and forms to inspirational images and custom notes. 
 
+# Click on the live link
+Try out our site so you can test it for yourself.
+**[Squirrel Away](https://squirrelaway.herokuapp.com/)**
+
+# Check out our Mobile Compainion App
+Check out the accompanying **[iOS Application Repository](https://github.com/RinniSwift/Squirrel)**.
+
 # The Team
 **[Anna Pawl](https://github.com/AnniePawl)** </br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Roles:** Project Manager, Frontend Lead, UX and UI Designer </br>
@@ -21,11 +28,45 @@ To squirrel something away means to stow it someplace safe, especially for futur
 </br> </br>
 **[Jason Romulus](https://github.com/jasonromulus)** </br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Roles:** Backend Engineer</br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Technologies:** Node.js, AWS
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Technologies:** Node.js, AWS 
 
-# The iOS Application
-Check out the accompanying **[iOS Application Repository](https://github.com/RinniSwift/Squirrel)**. 
+# Our File Structre
+```
+root/
+|
+|-- models/                     # our models
+        |-- auth.model.js
+        |-- resource.model.js
 
+|
+|-- public/                     # assets and custom css
+      |-- assest/
+      |--css
+      
+      
+|
+|-- routes/                     # routes
+      |-- auth.routes.js
+      |-- resource.routes.js
+
+|
+|-- views/                      # handlebars templates
+      |--layouts/
+      |
+      |-- partials/
+      
+|
+|-- server.js                   # server
+|-- README.md
+|-- squirrel.html
+```
+
+# Screenshots
+To be added
+
+# User Journeys
+As a student with mediocre organization skills and a proclivity for too many tabs, **Squirrel Away** really helps me store a myriad of links, along with helpful comments to remind me why I was looking at them in the first place.
+ 
 # Built With
 **Adobe Illustrator & Adobe Xd:** These are used for design graphics.</br>
 **Handlebars:** This is the frontend templete engine.</br>
@@ -39,3 +80,6 @@ When you clone this to your computer you will need to install the dependecies.</
 To install all the dependices at once please run `npm install`.</br>
 Once that is finsihed you can type `nodemon server.js` and the server will say "Listening on 3000".</br>
 When you need to kill the server run the command `Ctrl + C`.</br>
+
+# Contact
+Dont be afraid to contact us if you have a question about this project. Dont forget to make an issue if you see something.
