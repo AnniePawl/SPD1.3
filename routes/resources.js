@@ -159,7 +159,11 @@ module.exports = app => {
         })
         .then((data) => {
             console.log(data);
-            req.body.image = req.body.image || data.icons[0].src
+            if (data.icons.length > 0) {
+                req.body.image = req.body.image || data.icons[0].src
+            } else {
+                req.body.image = req.body.image || "https://via.placeholder.com/32x32"
+            }
             return Resource.create(req.body)
         })
         .then((resource) => {
