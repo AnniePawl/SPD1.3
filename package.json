@@ -27,6 +27,7 @@
     "express": "^4.16.4",
     "express-handlebars": "^3.0.0",
     "fs": "0.0.1-security",
+    "get-website-favicon": "0.0.7",
     "gridfs-stream": "^1.1.1",
     "jsonwebtoken": "^8.5.0",
     "method-override": "^3.0.0",

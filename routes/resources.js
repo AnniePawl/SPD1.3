@@ -4,6 +4,7 @@ const Auth = require('../models/auth.js')
 var Grid = require('gridfs-stream')
 var fs = require('fs');
 var contentType = require('content-type')
+var getFavicons = require('get-website-favicon')
 mongoose.Promise = global.Promise;
 Grid.mongo = mongoose.mongo;
 var connection = mongoose.connection;
@@ -151,6 +152,11 @@ module.exports = app => {
         console.log(obj);
         Auth.update({_id: req.body.user}, {$addToSet: {categories: req.body.category}})
         .then((user) => {
+            return getFavicons(req.body.url)
+        })
+        .then((data) => {
+            console.log(data);
+            req.body.image = req.body.image || data.icons[0].src
             return Resource.create(req.body)
         })
         .then((resource) => {
