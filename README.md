@@ -30,6 +30,35 @@ Check out the accompanying **[iOS Application Repository](https://github.com/Rin
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Roles:** Backend Engineer</br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Technologies:** Node.js, AWS 
 
+# Our File Structre
+```
+root/
+|
+|-- models/                     # our models
+        |-- auth.model.js
+        |-- resource.model.js
+
+|
+|-- routes/                     # routes
+      |-- auth.routes.js
+      |-- resource.routes.js
+|
+|-- views/                      # handlebars templates
+      |--layouts/
+      |
+      |-- partials/
+      
+|
+|-- public/                     # static content
+      |-- img/
+|
+|-- env files                   # environment variables
+|-- server.js                   # server
+|-- README.md
+|-- squirrel.html
+```
+
+
 # Built With
 **Adobe Illustrator & Adobe Xd:** These are used for design graphics.</br>
 **Handlebars:** This is the frontend templete engine.</br>
