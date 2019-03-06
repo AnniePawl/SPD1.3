@@ -56,7 +56,6 @@ root/
       |-- partials/
       
 |
-|-- env files                   # environment variables
 |-- server.js                   # server
 |-- README.md
 |-- squirrel.html
