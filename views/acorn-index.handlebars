@@ -9,7 +9,7 @@
 <div class="button-column">
 
         <a class="btn btn-sm btn-outline-dark" href="/resources" role="button">Back to Categories</a>
-        
+
     <form action="/resources/new" method="get">
         <input type="hidden" name="category" value="{{cat}}">
         <button class=" btn-outline-dark btn-sm" type="submit">Create New Acorn</button>
@@ -45,14 +45,14 @@
 <div class="card-container">
         <div class="card" style="width: 18rem;">
             <div class="card-body">
-                <img src="{{this.image}}" alt="">
-                <h5 class="card-title">{{this.name}}</h5>
+                <!-- <img src="{{this.image}}" alt=""> -->
+                <a href="{{this.url}}"><h5 class="card-title"> <span><img src="{{this.image}}" alt=""></span> {{this.name}} </h5></a>
                 <p class="card-text">{{this.notes}}</p>
-                <a href="{{this.url}}" class="card-link">Card link</a>
-                <p><a href="/resources/{{this._id}}/edit">Edit</a></p>
+                <a href="/resources/{{this._id}}" class="card-link details"><p class="card-text">Details</p></a>
+                <!-- <p><a href="/resources/{{this._id}}/edit">Edit</a></p>
                 <form method="POST" action="/resources/{{this._id}}?_method=DELETE">
                     <button class="btn btn-primary" type="submit">Delete</button>
-                </form>
+                </form> -->
             </div>
         </div>
 </div>

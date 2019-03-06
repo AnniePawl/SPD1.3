@@ -117,7 +117,10 @@ module.exports = app => {
     // NEW
     app.get ('/resources/new', (req, res) => {
         // res.json('-new', {});
-        res.render('acorn-new.handlebars', {cat: req.params.category});
+        var resource = {
+            "category": req.query.category
+        }
+        res.render('acorn-new.handlebars', {acorn: resource});
     })
     // NEW
     app.get ('/categories/new', (req, res) => {
@@ -210,9 +213,14 @@ module.exports = app => {
 
     // EDIT
     app.get('/resources/:id/edit', (req, res) => {
-        Resource.findById(req.params.id, function(err, ) {
+        Resource.findById(req.params.id)
+        .then((resource) => {
+        // Resource.findById(req.params.id, function(err, ) {
             // res.json('resources-edit')
-            res.render('acorn-edit.handlebars', {rId: req.params.id})
+            res.render('acorn-edit.handlebars', {rId: req.params.id, acorn: resource})
+        })
+        .catch((err) => {
+            console.log(err);
         })
     })
 

@@ -265,5 +265,8 @@ a.edit-acorn-link::after
     justify-content: space-between;
 }
 
+.details {
+    font-size: 1em;
+}
 
 /* Contact Form Styles */

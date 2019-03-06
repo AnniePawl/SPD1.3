@@ -15,27 +15,27 @@
       <!-- ACORN TITLE -->
           <div class="form-group">
             <label for="acorn-name"> </label><br>
-            <input type="text" class="form-control" id="acorn-name" name="name" placeholder="Name Your Acorn"/>
+            <input type="text" class="form-control" id="acorn-name" name="name" placeholder="Name Your Acorn" value="{{acorn.name}}"/>
           </div>
 
           <!-- ACORN DESCRIPTION -->
           <div class="form-group">
             <label for="description"></label><br>
-            <textarea class="form-control" id="acorn-description" name="notes" placeholder="Add a Brief Description of Your New Acorn" rows="10" cols="45" /></textarea>
+            <textarea class="form-control" id="acorn-description" name="notes" placeholder="Add a Brief Description of Your New Acorn" rows="10" cols="45" value="{{acorn.notes}}" /></textarea>
           </div>
 
 
           <!-- ACORN URL -->
           <div class="form-group">
             <label for="acorn-url"></label><br>
-            <input class="form-control" id="acorn-url" type="text" name="url" placeholder="Acorn URL"/>
+            <input class="form-control" id="acorn-url" type="text" name="url" placeholder="Acorn URL" value="{{acorn.url}}"/>
           </div>
 
           <!-- ACORN CATEGORY -->
           <!--Value? -->
           <div class="form-group">
               <label for="acorn-category"></label><br>
-              <input class="form-control" id="acorn-category" type="text" name="category" placeholder="Acorn Category" value = "{{cat}}" />
+              <input class="form-control" id="acorn-category" type="text" name="category" placeholder="Acorn Category" value = "{{acorn.category}}" />
             <!-- <select id="category" name="category" selected="{{ category }}"> -->
                 <!-- FILLER - can we populate this w/ real data? -->
               <!-- <option value="make-school">Make School</option>
