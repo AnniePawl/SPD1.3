@@ -1,27 +1,41 @@
-<h1 class="categories">Your Categories</h1>
+<div class="your-categories-container">
 
-<!-- <a href="/categories/new">New Category</a> -->
+    <h1 class="categories">Your Categories</h1>
 
-<div class="row">
+    <!-- Create a New Acorn Button -->
+    <form action="/categories-new" method="get">
+          <button class="btn-outline-dark btn-lg new-category-button" type="submit">Create a New Category</button>
+    </form>
+
+    <!-- Acorn Image -->
+    <img class="category-acorn" src="/assets/big-acorn.png" alt="Squirrel Away Hero">
+
+</div>
+
+<!-- <div class="row">
     {{#each categories}}
   <div class="col-sm-3">
     <p><a href="/{{this}}">{{this}}</a></p>
-    <!-- <h2><a href="/categories/{{this._id}}">{{this.name}}</a></h2>
-    <small>{{this.categoryName}}</small> -->
+    <h2><a href="/categories/{{this._id}}">{{this.name}}</a></h2>
+    <small>{{this.categoryName}}</small>
   </div>
 {{/each}}
-    <div class="col-sm-3">
-
-            <!-- Acorn Image -->
-            <!-- <img class="big-acorn1" src="/assets/big-acorn.png" alt="Squirrel Away Hero"> -->
-
-            <!-- <h1 class="made-new-acorn1">Create a New Acorn</h1> -->
-
-            <!-- Create a New Acorn Button -->
-            <form action="/categories/new" method="get">
-                <button class=" btn-outline-dark btn-sm new-acorn-button" type="submit">+</button>
-            </form>
+</div> -->
 
 
-    </div>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+      <div class="row">
+          {{#each categories}}
+        <div class="col-sm-3">
+          <p><a href="/{{this}}">{{this}}</a></p>
+          <!-- <a href="/categories/{{this._id}}">{{this.name}}</a>
+          <small>{{this.categoryName}}</small> -->
+        </div>
+      {{/each}}
+      </div>
+    <!--
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a> -->
+  </div>
 </div>
