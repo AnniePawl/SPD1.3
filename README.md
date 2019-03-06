@@ -82,4 +82,4 @@ Once that is finsihed you can type `nodemon server.js` and the server will say "
 When you need to kill the server run the command `Ctrl + C`.</br>
 
 # Contact
-Dont be afraid to contact us if you have a question about this project. Dont forget to make an issue if you see something.
+Dont be afraid to contact us if you have a question about this project. Make an issue if you see something.
