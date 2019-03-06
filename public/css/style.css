@@ -77,6 +77,8 @@ h1.login-heading, .signup-heading {
     text-align: center;
     padding:1em;
 }
+
+
 .acorn-pattern {
     z-index: 1;
     width: 50vw;
@@ -115,10 +117,14 @@ h1.login-heading, .signup-heading {
 }
 
 h1.categories {
-    text-align: center;
-    color:#152c4c;
-    padding: 2em;
+    margin-top: .5em;
+    margin-bottom: .4em;
+    color:#204272;
+
+    font-family: 'Montserrat', sans-serif; sans-serif;
 }
+
+
 
 h1.made-new-acorn {
     color: #204272;
@@ -155,6 +161,12 @@ h1.made-new-acorn1 {
     margin-right: 1em;
 }
 
+.category-acorn {
+    display: block;
+    margin-top: 1em;
+    width: 3em;
+
+}
 h3 {
  margin-top: .5em;
  color:black;
@@ -174,17 +186,28 @@ a.edit-acorn-link {
 
 a.edit-acorn-link::after
 
+.new-category-button {
+    width: 50%;
+    margin: auto;
+    margin-bottom: 1em;
+
+}
+.your-categories-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 /* Card (Acorn) Styles */
 
 /* buttons on acorns.show page (delete and back) */
 .show-buttons {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 .card-body {
     margin: 2em;
-
 }
 
 /* Contact Form Styles */
