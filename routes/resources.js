@@ -1,5 +1,6 @@
 const Resource = require('../models/resource.js')
 const mongoose = require('mongoose');
+const Auth = require('../models/auth.js')
 var Grid = require('gridfs-stream')
 var fs = require('fs');
 var contentType = require('content-type')
@@ -34,13 +35,16 @@ module.exports = app => {
         // console.log('entered /');
         // console.log(gfs);
         var obj = contentType.parse(req)
-        Resource.find({ user: req.user._id}).distinct('category')
+        console.log(req.user._id);
+        // Resource.find({ user: req.user._id}).distinct('category')
+        Auth.findById(req.user._id).select('categories')
         .then((categories) => {
+            console.log(categories.categories);
             // res.json(categories)
             if (obj.type == "text/html"){
-                res.render('category-index.handlebars', {categories: categories})
+                res.render('category-index.handlebars', {categories: categories.categories})
             } else {
-                res.json(categories)
+                res.json(categories.categories)
             }
         })
         .catch(err => {
@@ -107,18 +111,45 @@ module.exports = app => {
     // NEW
     app.get ('/resources/new', (req, res) => {
         // res.json('-new', {});
-        res.render('acorn-new.handlebars');
+        res.render('acorn-new.handlebars', {cat: req.params.category});
+    })
+    // NEW
+    app.get ('/categories/new', (req, res) => {
+        // res.json('-new', {});
+        res.render('category-new.handlebars');
     })
 
     // CREATE
+
+    app.post('/categories', (req, res) => {
+        req.body.user = req.user._id;
+        console.log("req.body:", req.body)
+        var obj = contentType.parse(req)
+        console.log(obj);
+        Auth.update({_id: req.body.user}, {$addToSet: {categories: req.body.category}})
+        .then((user) => {
+            if (obj.type == "application/x-www-form-urlencoded"){
+                res.redirect(`/resources`)
+            } else {
+                res.json(user.categories)
+            }
+        })
+        .catch((err) => {
+            console.log(err);
+        })
+    })
+
     app.post('/resources', (req, res) => {
         req.body.user = req.user._id;
         console.log("req.body:", req.body)
         var obj = contentType.parse(req)
         console.log(obj);
-        Resource.create(req.body)
+        Auth.update({_id: req.body.user}, {$addToSet: {categories: req.body.category}})
+        .then((user) => {
+            return Resource.create(req.body)
+        })
         .then((resource) => {
-            console.log("new Resource :", )
+            console.log("new Resource :", resource)
             if (obj.type == "application/x-www-form-urlencoded"){
                 res.redirect(`/resources/${resource._id}`)
             } else {
@@ -128,6 +159,26 @@ module.exports = app => {
         .catch((err) => {
             console.log(err.message)
         })
+        // Resource.create(req.body)
+        // .then((resource) => {
+        //     console.log("new Resource :", )
+        //     return Auth.update({_id: req.body.user}, {$addToSet: {categories: req.body.category}})
+        //     // if (obj.type == "application/x-www-form-urlencoded"){
+        //     //     res.redirect(`/resources/${resource._id}`)
+        //     // } else {
+        //     //     res.json(resource)
+        //     // }
+        // })
+        // .then((user) => {
+        //     if (obj.type == "application/x-www-form-urlencoded"){
+        //         res.redirect(`/resources/${resource._id}`)
+        //     } else {
+        //         res.json(resource)
+        //     }
+        // })
+        // .catch((err) => {
+        //     console.log(err.message)
+        // })
     })
 
     // SHOW #TODO: Modify so that user has to match
@@ -193,7 +244,7 @@ module.exports = app => {
         .then((docs) => {
             // res.json(docs)
             if (obj.type == "text/html"){
-                res.render('acorn-index.handlebars', {acorns: docs})
+                res.render('acorn-index.handlebars', {acorns: docs, cat: req.params.category})
             }
             else {
                 res.json(docs)

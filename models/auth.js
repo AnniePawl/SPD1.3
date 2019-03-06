@@ -8,7 +8,8 @@ const Schema = mongoose.Schema;
 const AuthSchema = new Schema({
   name: { type: String, required: true },
   username: { type: String, required: true },
-  password: { type: String, select: false }
+  password: { type: String, select: false },
+  categories: [String]
 }, {
   timestamps: true
 });

@@ -2,11 +2,11 @@
 
 <div class="row">
     <div class="col-sm-6 col-sm-offset-3">
-          <form method="POST" action="/categories/{{categoryId}}/acorns">
-              {{> new-acorn-form}}
-              <input type="hidden" name="categoryId" value="{{categoryId}}">
+          <form method="POST" action="/categories">
+              <label for="category-name"> </label><br>
+              <input type="text" class="form-control" id="category-name" name="category" placeholder="Name of Category"/>
               <div class="form-group">
-                <button class="btn btn peach-gradient" type="submit">Save Acorn!</button>
+                <button class="btn btn" type="submit">Create</button>
               </div>
           </form>
       </div>
