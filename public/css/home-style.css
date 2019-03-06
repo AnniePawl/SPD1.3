@@ -60,25 +60,14 @@ p.description {
     margin-left: auto;
     margin-bottom: 5em;
  }
-
+/* 
  a.signup-link {
      text-align: center;
-     font-size: 1em;
+     font-size: 1vw;
      color:#f2f2f2;
      text-decoration: none;
+ } */
 
-
- }
-
-
- a.signup-link:hover {
-     color: #a6daf4;
- }
-
- a.signup-link:after {
-      color:#a6daf4;
-
- }
 
  .signup-and-login-container {
      display: flex;
