@@ -62,8 +62,8 @@ const checkAuthStatus = (req, res, next) => {
     req.user = decodedToken.payload;
   }
   res.locals.currentUser = req.user;
-  console.log('current user is:');
-  console.log(res.locals.currentUser);
+  // console.log('current user is:');
+  // console.log(res.locals.currentUser);
   return next();
 };
 
@@ -76,7 +76,8 @@ const authentication = (req, res, next) => {
   if (req.user || _.contains(insecurePath, req.path)) {
     return next();
   }
-  return res.status(401).send('UNAUTHENTICATED');
+  return res.redirect("/login")
+  // return res.status(401).send('UNAUTHENTICATED');
 };
 
 app.use(authentication)
